@@ -1,0 +1,7 @@
+TypeError: can only concatenate str (not "float") to str
+
+stop:final é exclusivo(numero-1)
+elif equivale ao elseif
+
+valorH
+qtdH
