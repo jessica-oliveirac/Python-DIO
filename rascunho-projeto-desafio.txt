@@ -1,0 +1,32 @@
+
+- Depósito
+-> não pode depositar valor negativo, só inteiro e positivo
+-> devem ser armazenados em uma variável e exibidos na operação de extrato
+- Saque
+-> permitir 3 saques diários com limite máximo de 500,00 por cada saque
+-> Saldo em conta = 0, "Não será possível sacar o dinheiro por falta de saldo
+-> devem ser armazenados em uma variável e exibidos na operação de extrato
+- Extrato
+-> listar todos os depósitos e saques realizados na conta
+-> No fim da listagem deve ser ecibido o saldo atual da conta
+formato dos valores: R$ xxx.xx
+
+print(
+    """
+    ========== MENU ==========
+    [1] Depositar
+    [2] Sacar
+    [3] Vizualizar extrato
+    [4] Sair
+    ==========================
+    """
+)
+opcao = int(input(""))
+
+if opcao == 1:
+    print("Depósito")
+elif opcao == 2:
+    print("Saque")
+elif opcao == 3:
+    print("Vizualização")
+elif opcao == 4:
