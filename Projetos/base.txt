@@ -1,0 +1,50 @@
+    => d
+Informe o valor de depósito: -100
+Operação falhou! O valor informado é inválido.
+-------------------------------------------------
+    => s
+Informe o valor do saque: -100
+Operação falhou! O valor informado é inválido.
+-------------------------------------------------
+    => s
+Informe o valor do saque: 400
+Operação falhou! Você não tem saldo suficiente.
+-------------------------------------------------
+    => s
+Informe o valor do saque: 5000
+Operação falhou! Você não tem saldo suficiente.
+-------------------------------------------------
+    => e
+
+================ EXTRATO ================
+Não foram realizadas movimentações.
+
+Saldo: R$ 0.00
+===========================================
+-------------------------------------------------
+    => s
+Informe o valor do saque: 1400
+Operação falhou! O valor do saque excede o limite.
+-------------------------------------------------
+
+-------------------------------------------------
+-------------------------------------------------
+-------------------------------------------------
+-------------------------------------------------
+
+
+
+
+
+
+
+
+
+float =
+if valor>saldo
+if valor<0
+
+
+if (valor > limite_max) and (qtdSaques>3)
+
+if qtdSaques >3
