@@ -1,0 +1,66 @@
+#Métodos 2
+
+# {}.keys
+#Retorna as chaves
+contatos = {"guilherme@gmail.com": {"nome": "Guilherme", "telefone": "3333-2221"}}
+
+resultado = contatos.keys()  # dict_keys(['guilherme@gmail.com'])
+print(resultado)
+
+novo_dicionario = {"a":100, 1: "teste", "b": "python"}
+print(novo_dicionario.keys())	#dict_keys(['a', 1, 'b'])
+
+------------------------------------
+# {}.pop
+
+contatos = {"guilherme@gmail.com": {"nome": "Guilherme", "telefone": "3333-2221"}}
+
+resultado = contatos.pop("guilherme@gmail.com")  # {'nome': 'Guilherme', 'telefone': '3333-2221'}
+print(resultado)
+
+resultado = contatos.pop("guilherme@gmail.com", {})  # {}
+print(resultado)
+#Se a chave não existir dá para passar um valor padrão para ele retornar
+
+------------------------------------
+# {}.popitem
+#A chave não é informada e ele vai retirando os utems na sequência
+contatos = {"guilherme@gmail.com": {"nome": "Guilherme", "telefone": "3333-2221"}}
+
+resultado = contatos.popitem()  # ('guilherme@gmail.com', {'nome': 'Guilherme', 'telefone': '3333-2221'})
+print(resultado)
+
+# contatos.popitem()  # KeyError
+
+------------------------------------
+# {}.setdefault
+#Se o valor não estiver no dicionário ele coloca o atributo solicitado
+
+contato = {"nome": "Guilherme", "telefone": "3333-2221"}
+
+contato.setdefault("nome", "Giovanna")  # "Guilherme"
+print(contato)  # {'nome': 'Guilherme', 'telefone': '3333-2221'}
+#Se o valor não estiver no dicionário é retornado o valor atual e não altera ele
+
+contato.setdefault("idade", 28)  # 28
+print(contato)  # {'nome': 'Guilherme', 'telefone': '3333-2221', 'idade': 28}
+
+# para adicionar um valor caso ele não exista
+------------------------------------
+# {}.update
+#Nos deixa atualizar o dicionário com outro dicionário
+
+contatos = {"guilherme@gmail.com": {"nome": "Guilherme", "telefone": "3333-2221"}}
+
+contatos.update({"guilherme@gmail.com": {"nome": "Gui"}})
+print(contatos)  # {'guilherme@gmail.com': {'nome': 'Gui'}}
+# Com uma chave existente ele atualiza o dicionário
+
+
+contatos.update({"giovanna@gmail.com": {"nome": "Giovanna", "telefone": "3322-8181"}})
+# {'guilherme@gmail.com': {'nome': 'Gui'}, 'giovanna@gmail.com': {'nome': 'Giovanna', 'telefone': '3322-8181'}}
+print(contatos)
+
+#Atualiza o dicionário com a nova chave
+------------------------------------
+# {}.values

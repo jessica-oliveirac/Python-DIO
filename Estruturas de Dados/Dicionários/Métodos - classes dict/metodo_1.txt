@@ -1,0 +1,83 @@
+#Métodos
+
+# {}.clear
+# {} clocar a variável do dicionário
+contatos = {
+    "guilherme@gmail.com": {"nome": "Guilherme", "telefone": "3333-2221"},
+    "giovanna@gmail.com": {"nome": "Giovanna", "telefone": "3443-2121"},
+    "chappie@gmail.com": {"nome": "Chappie", "telefone": "3344-9871"},
+    "melaine@gmail.com": {"nome": "Melaine", "telefone": "3333-7766"},
+}
+
+contatos.clear()
+print(contatos)  # {} clocar a variável do dicionário
+
+------------------------------------
+# {}.copy
+contatos = {"guilherme@gmail.com": {"nome": "Guilherme", "telefone": "3333-2221"}}
+
+copia = contatos.copy()
+copia["guilherme@gmail.com"] = {"nome": "Gui"}
+
+print(contatos["guilherme@gmail.com"])  # {"nome": "Guilherme", "telefone": "3333-2221"}
+
+print(copia["guilherme@gmail.com"])  # {"nome": "Gui"}
+
+------------------------------------
+# {}.fromkeys
+# cria chaves
+# Se o dicionário for existente é só usar o nome dele
+
+# Somente criar as chaves (sem vincular nenhum valor)
+resultado = dict.fromkeys(["nome", "telefone"])  # {"nome": None, "telefone": None}
+print(resultado)
+
+#Criar um conjunto de chaves e colocar um valor padrão nelas
+resultado = dict.fromkeys(["nome", "telefone"], "vazio")  # {"nome": "vazio", "telefone": "vazio"}
+print(resultado)
+
+------------------------------------
+# {}.get
+
+#segunda forma de acessar valores dentro de um dicionário
+
+
+
+contatos = {"guilherme@gmail.com": {"nome": "Guilherme", "telefone": "3333-2221"}}
+
+#(slice): Uma das formas padrão de acesso. Acessa o nome da chave diretamente
+# contatos["chave"]  # KeyError
+#Se o nome da chave não existir no dicionário, ele lança uma exceção
+
+
+
+resultado = contatos.get("chave")  # None
+print(resultado)
+
+resultado = contatos.get("chave", {})  # {}
+print(resultado)
+#Se o valor não for encontrado ele retorna um dicionário vazio
+
+
+resultado = contatos.get(
+    "guilherme@gmail.com", {}
+)  # {"guilherme@gmail.com": {"nome": "Guilherme", "telefone": "3333-2221"}
+print(resultado)
+
+
+------------------------------------
+# {}.items
+#Retorna uma lista de tuplas. Util pquando for usara o comando for e quiser iterar os valores
+
+contatos = {"guilherme@gmail.com": {"nome": "Guilherme", "telefone": "3333-2221"}}
+
+resultado = contatos.items()  # dict_items([('guilherme@gmail.com', {'nome': 'Guilherme', 'telefone': '3333-2221'})])
+print(resultado)
+
+
+------------------------------------
+# {}.keys
+contatos = {"guilherme@gmail.com": {"nome": "Guilherme", "telefone": "3333-2221"}}
+
+resultado = contatos.keys()  # dict_keys(['guilherme@gmail.com'])
+print(resultado)
