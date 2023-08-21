@@ -3,6 +3,8 @@ extrato = ""
 qtdSaques = 0
 opcao = 1
 deposito = 0
+VALOR_LIMITE = 500
+SAQUE_LIMITE = 3
 while opcao !=0:
     print( 
     """   
@@ -25,9 +27,8 @@ while opcao !=0:
     elif opcao == 2:
         valor = float(input("Saque um valor: "))
         excedeu_saldo = valor > saldo
-        excedeu_limite = valor > 500
-        excedeu_saques = qtdSaques >= 3
-
+        excedeu_limite = valor > VALOR_LIMITE 
+        excedeu_saques = qtdSaques >= SAQUE_LIMITE 
         if excedeu_saldo:
             print("ERRO! Saldo insuficiente.")
         elif excedeu_limite:

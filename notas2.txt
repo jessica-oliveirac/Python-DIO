@@ -1,0 +1,14 @@
+Lista
+- Sequencial
+Tupla
+- Sequencial
+- imútavel
+Conjunto
+- Não ordenado
+- valores únicos
+Dicionários
+- Não ordenado
+- valores únicos
+Chave:imutável
+
+Funç
